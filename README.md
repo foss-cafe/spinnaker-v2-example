@@ -1,6 +1,5 @@
 # spin-helm-demo
-
-This is the sample repository for the post [Deploying Helm Charts with Armory Spinnaker](https://kb.armory.io/kubernetes/using-spinnaker-and-helm/). If you're planning on using Helm charts with Spinnaker, these resources should serve as a good way to get started.
+If you're planning on using Helm charts with Spinnaker, these resources should serve as a good way to get started.
 
 ## What's included?
 
@@ -15,15 +14,6 @@ This is the sample repository for the post [Deploying Helm Charts with Armory Sp
 * `helm`
 * `aws`
 * `curl`
+* `jq`
+* `yq`
 
-## Making customizations
-
-The `Makefile` exposes a few options that can be overridden. To override them, create a file called `.env` with the following contents:
-
-```
-export CHART_BUCKET=my-chart-bucket
-export DOCKER_REPO=dockerhubusername/spin-helm-demo
-export SPINNAKER_API=https://mycoolspinnaker.spinnaker.io
-```
-
-Then, run `source .env` to make them all environment variables. `make` will override the default values with these variables.
