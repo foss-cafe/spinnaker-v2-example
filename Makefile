@@ -10,11 +10,11 @@ SPINNAKER_API ?= http://localhost:8084
 
 docker:
 	docker build -t $(DOCKER_REPO):$(APP_VERSION) .
-	docker tag $(DOCKER_REPO):$(APP_VERSION) $(DOCKER_REPO):latest
+	#docker tag $(DOCKER_REPO):$(APP_VERSION) $(DOCKER_REPO):latest
 
 dockerpush: docker
 	docker push $(DOCKER_REPO):$(APP_VERSION)
-	docker push $(DOCKER_REPO):latest
+	#docker push $(DOCKER_REPO):latest
 
 compile:
 	helm package chart/spin-helm-demo
